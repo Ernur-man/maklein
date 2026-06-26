@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import type { RegistrationPayload } from '../shared/validation'
+import type { RegistrationPayload } from '../shared/validation.ts'
 import { getSheetMonkeyUrl, getTurnstileSecret } from '../server/env.ts'
-import { handleRegister } from '../server/registerHandler'
+import { handleRegister } from '../server/registerHandler.ts'
 
 function getClientIp(req: VercelRequest): string | undefined {
   const forwarded = req.headers['x-forwarded-for']
