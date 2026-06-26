@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import type { RegistrationPayload } from '../shared/validation'
-import { getSheetMonkeyUrl, getTurnstileSecret } from '../server/env'
+import { getSheetMonkeyUrl, getTurnstileSecret } from '../server/env.ts'
 import { handleRegister } from '../server/registerHandler'
 
 function getClientIp(req: VercelRequest): string | undefined {
